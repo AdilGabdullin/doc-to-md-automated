@@ -1,0 +1,30 @@
+Metric
+Description
+Query type
+Attendee meeting hours
+Sum of the total adjusted meeting hours for all attendees.
+Meeting
+Attendees
+Number of people who attended the meeting.
+Meeting
+Attendees multitasking
+Number of attendees that sent emails during the meeting.
+Meeting
+
+* In meetings of one hour or less, two or more emails.
+
+
+* In meetings longer than one hour, two emails per hour. (Example: Sending four emails during a two-hour meeting would count as multitasking.)
+
+Attendees with conflicting meeting
+Number of attendees with meetings that overlap with the meeting (includes all non-declined meetings).
+Meeting
+Emails sent during meeting
+Number of emails the person sent during all meetings.
+Meeting
+Invitees
+Number of people invited to the meeting.
+Meeting
+Total emails sent during meeting
+Number of emails sent during the meeting by all attendees.
+Meetings

@@ -1,0 +1,21 @@
+Metric
+Description
+Query type
+Email hours allocated
+Number of email hours between the user-defined groups.
+Group
+Meeting hours allocated
+Number of meeting hours between the user-defined groups.
+Group
+Meetings attended together
+Number of distinct meetings with at least one attendee from each user-defined group.
+Group
+Total attendees
+Total number of attendees in all meetings from each user-defined group.
+Group
+Total collaboration hours allocated
+Total number of collaboration hours between the user-defined groups.
+Group
+Total invitees
+Total number of invitees in all meetings from each user-defined group.
+Group
