@@ -1,15 +1,15 @@
 <?php
-require_once 'TextTable.php';
 
-function automate(string $fileName): string
+function generateMarkdown(string $fileName): string
 {
-    $data = file_get_contents($fileName);
-    $blocks = explode("\r\n\r\n", $data);
+    $blocks = explode("\r\n\r\n", file_get_contents($fileName));
     $result = '';
     foreach ($blocks as $block) {
         if ($block[0] === '#') {
+            // as is
             $result .= $block . PHP_EOL;
         } else {
+            // table
             $result .= generateTable($block);
         }
     }
@@ -22,6 +22,7 @@ function generateTable(string $data): string
     $columnsNum = (int)$lines[0];
     $rowsNum = (count($lines) - 1) / $columnsNum;
 
+    // Table head
     $tableHead = '|';
     for ($j = 0; $j < $columnsNum; $j++) {
         $tableHead .= $lines[$j + 1] . '|';
@@ -29,7 +30,7 @@ function generateTable(string $data): string
     $result = $tableHead . PHP_EOL;
     $result .= preg_replace('/[^|]/', '-', $tableHead) . PHP_EOL;
 
-
+    // Table body
     for ($i = 1; $i < $rowsNum; $i++) {
         $row = '|';
         for ($j = 0; $j < $columnsNum; $j++) {
@@ -40,18 +41,6 @@ function generateTable(string $data): string
     return $result;
 }
 
-$result = automate('input.txt');
+$result = generateMarkdown('input.txt');
 echo $result;
 file_put_contents('Metric descriptions and glossary.md', $result);
-//$result = '# Metric descriptions for Workplace Analytics' . PHP_EOL;
-//$result .= '## Person metrics' . PHP_EOL;
-//$result .= generateTable('input/person metrics.txt', 3);
-//$result .= '## Meeting metrics'. PHP_EOL;
-//$result .= generateTable('input/meeting metrics.txt', 3);
-//$result .= '## Group metrics'. PHP_EOL;
-//$result .= generateTable('input/group metrics.txt', 3);
-//$result .= '# Glossary for Workplace Analytics'. PHP_EOL;
-//$result .= generateTable('input/Glossary for Workplace Analytics.txt', 2);
-//
-//echo $result;
-//file_put_contents('Metric descriptions and glossary.md', $result);
