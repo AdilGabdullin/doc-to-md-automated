@@ -312,7 +312,7 @@ The concept of not staying focused on the task at hand. Defined in Workplace Ana
 Non-declined meeting request
 In Workplace Analytics, this is synonymous with *attended*.
 Optional attribute
-Optional *organizational data* attributes that describe the people being analyzed. If supplied by the company, these attributes can be used to group in Explore metrics and filter queries and customize metrics. These are reserved for future metric calculations. The optional attributes are FunctionType, Layer, HourlyRate.
+Optional *organizational data* attributes that describe the people being analyzed. If supplied by the company, these attributes can be used to group in **Explore metrics** and filter queries and customize metrics. These are reserved for future metric calculations. The optional attributes are FunctionType, Layer, HourlyRate.
 Organization
 A *required attribute* that describes the organizational unit in which the employee resides. The exact value will be determined by the company’s structure, as well as how that structure is captured in within the company’s human resources information system.<br>For example: the organization may also be known as department, function, or could be defined by a specific manager name in the management hierarchy. 
 Organizational data
@@ -328,7 +328,7 @@ A person included in an email (includes the sender and people included in cc and
 Redundant
 A meeting is considered redundant if at least three attendees are from different *levels* within the same organization.<br>For example: A meeting whose attendees included a General Manager, a Director and an Independent Contributor from the same organization would be considered redundant.
 Required attribute
-Mandatory organizational data attributes that describe the people being analyzed. Required attributes are reserved by Workplace Analytics for calculating metrics and can be used to customize metrics, group in Explore metrics, and filter query results. The two required attributes are LevelDesignation (also referred to as level) and Organization.
+Mandatory organizational data attributes that describe the people being analyzed. Required attributes are reserved by Workplace Analytics for calculating metrics and can be used to customize metrics, group in **Explore metrics**, and filter query results. The two required attributes are LevelDesignation (also referred to as level) and Organization.
 Sender
 The person who sends an email.
 Span
