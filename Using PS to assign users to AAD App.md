@@ -12,12 +12,12 @@
 2. In the elevated Windows PowerShell command prompt that you opened above, run the following command -> $spo = Get-AzureADServicePrincipal -ObjectId &lt;Object ID&gt;.
 3. Identify the roles by running the following command which will return all the available roles: -> $spo.AppRoles<br>![](images/PS_1.png)
 4. Get access to specific role.  You can see each role’s properties by checking the returned role.    
-    - Program Manager:<br>***-> $programManagerRole = $spo.AppRoles | Where-Object {$_.DisplayName -eq 'Program Manager'}***<br>![](images/PS_2.png)
+    - Program Manager:<br>*** -> $programManagerRole = $spo.AppRoles | Where-Object {$_.DisplayName -eq 'Program Manager'} ***<br>![](images/PS_2.png)
     - Administrator:<br>***-> $adminRole = $spo.AppRoles | Where-Object {$_.DisplayName -eq 'Administrator'}***<br>![](images/PS_3.png)
     - Analyst Limited Access:<br>***-> $analystLimitedAccessRole = $spo.AppRoles | Where-Object {$_.DisplayName -eq 'Analyst (Limited Access)'}***<br>![](images/PS_4.png)
     - Analyst<br>***-> $analystRole = $spo.AppRoles | Where-Object {$_.DisplayName -eq 'Analyst'}***<br>![](images/PS_5.png)
 
-##Assigning users to roles
+## Assigning users to roles
 
 1. In the Azure Active Directory admin center, identify the &lt;Object ID&gt; that corresponds to the user you want to assign to one of the roles<br>![](images/PS_6.png)
 2. In the elevated Windows PowerShell command prompt that you opened above, run the following command -> ***$user = Get-AzureADUser -ObjectId &lt;objectid&gt;***
